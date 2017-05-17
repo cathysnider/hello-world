@@ -1,2 +1,2 @@
 # hello-world
-This repository holds the code for the student training file.
+This repository holds the code for the Profile pagelet.
