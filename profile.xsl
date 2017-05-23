@@ -78,12 +78,14 @@ $("a#profileLink").click(function(){
 				<table class="tbl-profile" role="presentation">
           <tr>
             <td><h3>Account Settings</h3>
-              <ul id="helpfullinks">
-                <li><a href="http://cuidm.colorado.edu/?SelectAccessData=true" target="_blank">Manage your email addresses</a></li>
-                <li><a href="http://cuidm.colorado.edu/?SelectAccessData=true" target="_blank">Change your IdentiKey password</a></li>
-                <li><a href="../../HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL">View/update your addresses</a></li>
-                <li><a href="../../HRMS/c/CC_PORTFOLIO.CU_SS_CC_PARPROXY.GBL?Page=CU_SS_PARENTPROXY">Privacy Settings</a></li>
-              </ul></td>
+             
+		<ul id="helpfullinks">    
+ <li><a href="http://cuidm.colorado.edu/?SelectAccessData=true" target="_blank">IdentiKey Options</a></li>
+
+<li><a href="../../HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL#pop-7">Manage Profile and Privacy</a></li>
+
+</ul>  
+		  </td>
           </tr>
          
         </table>
