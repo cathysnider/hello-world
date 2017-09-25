@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <!-- by Cathy Snider, Strategic Relations, CU Boulder -->
-  <!-- 5-17-2017: add intl residency -->
+  <!-- 6-01-2017: broken link to greyHeller -->
 
   <xsl:template match="root">
     <div id="mycuinfoprofile">
@@ -180,7 +180,7 @@ $.ajax({
               <td><h3>Account Settings</h3>
                 <ul id="helpfullinks">              
                 <li><a href="http://cuidm.colorado.edu/?SelectAccessData=true" target="_blank">IdentiKey Options</a></li>
-                <li><a href="../../HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL#pop-7">Manage Profile and Privacy</a></li>
+                <li><a href="../../HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL#tile-7">Manage Profile and Privacy</a></li>
               </ul>
 </td>
      </tr>
