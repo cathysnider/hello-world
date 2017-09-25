@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <!-- by Cathy Snider, Strategic Relations, CU Boulder -->
-  <!-- 6-01-2017: broken link to greyHeller -->
+  <!-- 9-20-2017: ADD CANVAS LINK -->
 
   <xsl:template match="root">
     <div id="mycuinfoprofile">
@@ -36,6 +36,19 @@
      <script type="text/javascript">
 
   <xsl:comment> // without this the portal breaks the code
+  
+  // This creates link for Canvas
+  var canvasURL = {
+'iepdev' : 'https://cuboulder.beta.instructure.com',
+'ieptst' : 'https://cuboulder.test.instructure.com',
+'iepstg' : 'https://canvas.colorado.edu',
+'iepprd' : 'https://canvas.colorado.edu'
+};
+var dbLocation = window.location.pathname.match(/\/psp\/([^\/]+)\//)[1];
+$('#canvasLink').attr('href', canvasURL[dbLocation]);
+
+  
+  
 var resDataLink = document.getElementById('profileLink');
 resDataLink.onclick = getResidency; 
 
@@ -84,11 +97,14 @@ $.ajax({
        	    window.mainResDataset = mainResDataset;
 			//set student type to tuition_res	
         	var studentType = mainResDataset.tuition_res;         
-		 //look at every student group item in the array; if there's a hit change student type to INTL
+		 // if student is not RES, look at every student group item in the array; if there's a hit change student type to INTL
+		 if (studentType != "RES") { 
         for (var i = 0; i &#60; dataArrayLength; i++) { 
         var studentGroupData = MyJsonObject.datasets.residency.data[i].student_group;
         if (studentGroupData == "AITL") {studentType = "INTL";}		 
-           }
+           
+		   }
+		  }
         }
 			
         console.log("studentType: " + studentType); 
@@ -103,7 +119,7 @@ $.ajax({
         	break;
     		case "INTL": residencyValue = "International";
        		break;			
-		case "NRES": residencyValue = "Out-of-state";
+			case "NRES": residencyValue = "Out-of-state";
        		break;
     		case "CEES": residencyValue = "Noncredit";
        		break;
@@ -269,7 +285,10 @@ $.ajax({
   </xsl:template>
   
   <xsl:template match="demographicData/affiliations">
-    <xsl:if test="(affiliation = 'FACULTY') or (affiliation = 'ADVISOR')"><div class="link"><a href="https://outlook.office365.com/" target="_blank">Office 365 Outlook</a></div></xsl:if>
+    <xsl:if test="(affiliation = 'FACULTY') or (affiliation = 'ADVISOR')">
+    <div class="link"><a href="javascript:void(0);" id="canvasLink" target="_blank">Canvas</a></div>
+    <div class="link"><a href="https://outlook.office365.com/" target="_blank">Office 365 Outlook</a></div>
+    </xsl:if>
     <xsl:if test="affiliation = 'STUDENT'"><div class="link"><a href="http://gmail.colorado.edu" target="_blank">Gmail</a></div></xsl:if>		
   </xsl:template>
   
