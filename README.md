@@ -1,2 +1,2 @@
 # hello-world
-This repository holds the code for whatever
+Working with Git Hub
