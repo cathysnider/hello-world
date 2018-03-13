@@ -195,8 +195,9 @@ $.ajax({
             <tr>
               <td><h3>Account Settings</h3>
                 <ul id="helpfullinks">              
-                <li><a href="http://cuidm.colorado.edu/?SelectAccessData=true" target="_blank">IdentiKey Options</a></li>
-                <li><a href="../../HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL#tile-7">Manage Profile and Privacy</a></li>
+			<li>Gumbo beet greens corn soko endive gumbo gourd.</li>
+ <li>Parsley shallot courgette tatsoi pea sprouts fava bean collard greens </li>
+ <li>Dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</li>
               </ul>
 </td>
      </tr>
