@@ -1,16 +1,32 @@
-
 default:
-  paths:
-    features: 'features'
+  context:
+    class:  'InheritedFeatureContext'
   extensions:
     Behat\MinkExtension\Extension:
-      goutte: ~
+      base_url:  'http://en.wikipedia.org/'
+      goutte:    ~
       selenium2: ~
-      base_url: http://192.168.1.8/
-      show_cmd: "open %s"
-    Drupal\DrupalExtension\Extension:
-      blackbox: ~
+
+# No context:
+no_context:
+  paths:
+    bootstrap: 'NON_EXISTING_FOLDER'
+  filters:
+    tags:      '~@javascript'
+
+# Context based on inheritance:
+inheritance:
   context:
-    class: FeatureContext
-    parameters:
-      hostHeader: 'd7.dev'
+    class:      'InheritedFeatureContext'
+
+# Context based on traits:
+traits:
+  paths:
+    bootstrap:  'features/php54_bootstrap'
+  context:
+    class:      'TraitedFeatureContext'
+
+# Context based on subcontexting:
+subcontexts:
+  context:
+    class:      'SubcontextedFeatureContext'
