@@ -1,1 +1,16 @@
 
+default:
+  paths:
+    features: 'features'
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://192.168.1.8/
+      show_cmd: "open %s"
+    Drupal\DrupalExtension\Extension:
+      blackbox: ~
+  context:
+    class: FeatureContext
+    parameters:
+      hostHeader: 'd7.dev'
