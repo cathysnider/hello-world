@@ -195,9 +195,9 @@ $.ajax({
             <tr>
               <td><h3>Account Settings</h3>
                 <ul id="helpfullinks">              
-			<li>Gumbo beet greens corn soko endive gumbo gourd.</li>
- <li>Parsley shallot courgette tatsoi pea sprouts fava bean collard greens </li>
- <li>Dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</li>
+			<li><a href="#">Gumbo beet greens corn soko endive gumbo gourd.</a></li>
+<li><a href="#">Parsley shallot courgette tatsoi pea sprouts fava bean collard greens </a></li>
+<li><a href="#">Dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</a></li>
               </ul>
 </td>
      </tr>
