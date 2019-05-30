@@ -3,6 +3,7 @@
 	<xsl:output method="html" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" indent="yes" />
 	<!-- by Cathy Snider, Web Communications, CU-Boulder -->
     <!-- updates by Lou Ordica March 2017 -->
+	<!-- another comment here -->
     
 	<xsl:param name="message"></xsl:param>
 	<xsl:param name="coursetype"></xsl:param>
@@ -114,7 +115,6 @@ $(function(){
 			<input type="hidden" name="TypeRequested" value="Desire2Learn"/>
 			<input type="hidden" name="longName" value="{/root/course/longName}" />
 			<!-- End change 1 -->
-			
 			
             <h2>Combine Sections</h2>
 			<p><b>Select other courses, recitations, or labs to combine with the same D2L space as the course above.</b></p>
