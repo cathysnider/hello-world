@@ -3,7 +3,7 @@ default:
     class:  'InheritedFeatureContext'
   extensions:
     Behat\MinkExtension\Extension:
-      base_url:  'http://en.wikipedia.org/'
+      base_url:  'http://www.google.com/'
       goutte:    ~
       selenium2: ~
 
